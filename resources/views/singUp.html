@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(158, 154, 154, 0.432);
+            background-size:cover;
+        }
+        .conteiner{
+            width: 70%;
+            height: 85%;
+            background-color:rgba(247, 247, 247, 0.829);
+            backdrop-filter: blur(6.1px);
+            border-radius: 6px;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+        }
+        #text-box{
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #images-box{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+          
+
+        form{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        
+        input{
+            border: 0.2px solid rgba(128, 128, 128, 0.705);
+           border-radius: 6px;
+           width: 45%;
+           height: 40px;
+           padding: 4px;
+           margin-bottom: 12px;
+           box-sizing: border-box;
+            }
+         input:focus{
+            border: 1px solid grey;
+            outline: none;
+            border-color: rgb(0, 153, 255);
+        }
+        button{
+            border: none;
+            margin-top: 8px;
+            font-size: 15px;
+            color: #fff;
+            background-color: rgb(14, 76, 192);
+            width: 180px;
+            height: 35px;
+            border-radius: 4px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(14, 62, 192);
+        }
+        .info{
+            color: #e6e3e3d0;
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            }
+            .info1{
+            color: #e6e3e3d0;
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: center;
+            }
+            footer{
+                height: 10%;
+                display:flex;
+                justify-content: end;
+                align-items: end;
+            }
+            footer span{
+                color: #000;
+                font-size: 10px;
+            }
+                
+    </style>
+</head>
+<body>
+
+    <div class="conteiner">
+        <div class="content">
+            
+            <div id="images-box">
+                <img src="#" alt="emlema">
+            </div>
+        <div id="text-box">
+            <h2>Criar Conta de Agente</h2>
+        </div>
+        <form action="#" method="POST">
+            <input required type="text" placeholder="Número de Identificação Funcional">
+            <input required type="text" placeholder="Nome Completo">
+            <input required type="email" placeholder="E-mail Insitucional">
+            <input required type="text" placeholder="Departamento">
+            <input required type="password" placeholder="Palavra-Passe">
+            <input required type="password" placeholder="Confirmar-Palavra-Passe">
+       
+           <label class="info1"><h6>Use Letras Maiúsculas, Números e Caracteres Especiais </h6></label>
+            
+            <div id="button-box">
+                <button id="createacount">Criar Conta</button>
+            </div>
+            <div class="info">
+            <label><h6>República de Angola | Ministério do Interior </h6></label>
+            <label><h6>Sistema Integrado de Gestão de Investigação</h6></label>
+        </div>
+        </form>
+        </div>
+    </div>
+    <footer>
+      <span>&copy 2025 | Luanda</span>
+    </footer>
+</body>
+</html>

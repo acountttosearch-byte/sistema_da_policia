@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Registro de Queixa</title>
+    <style>
+                :root {
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --muted: #6b7280;
+            --accent: #2b78f6;
+            --accent_dark: #1e56b1;
+            --danger: #e11d48;
+            --border: #e6e9ee;
+            --radius: 12px;
+            --container: 1100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: #111827;
+            line-height: 1.45
+        }
+
+        .wrap {
+            max-width: var(--container);
+            margin: 36px auto;
+            padding: 20px
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 18px
+        }
+
+        header h1 {
+            font-size: 30px;
+            line-height: 2rem;
+            margin: 0
+        }
+
+        header p {
+            color: var(--muted);
+            margin-top: 6px
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-bottom: 12px
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px
+        }
+
+        .row {
+            display: flex;
+            gap: 16px
+        }
+
+        .col {
+            flex: 1
+        }
+
+        .full {
+            flex-basis: 100%
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 6px
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: #fbfdff;
+            font-size: 14px;
+            outline: none;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        select:focus {
+            border-color: rgb(0, 153, 255);
+        }
+
+        input:focus {
+            border-color: rgb(0, 153, 255);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical
+        }
+
+        textarea:focus {
+            border-color: rgb(0, 153, 255);
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .upload {
+            border: 1px dashed var(--border);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            background: #fff;
+            }
+            .upload:hover{
+                cursor: pointer;
+            border-color: rgb(0, 153, 255);
+            }
+
+        .upload input {
+            display: none
+        }
+
+        .upload .hint {
+            color: var(--muted);
+            font-size: 13px
+        }
+
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end
+        }
+
+        .btn {
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 0;
+            cursor: pointer;
+            font-weight: 600
+        }
+        .back{
+            width: 100px;
+            background: var(--accent);
+            color: white
+        
+        }
+        .back:hover {
+            background-color: var(--accent_dark);
+        }
+        .btn.secondary {
+            background: #fff;
+            border: 1px solid var(--border);
+            color: #374151
+        }
+
+        .btn.secondary:hover {
+            background-color: rgba(238, 42, 42, 0.459);
+        }
+
+        .btn.primary {
+            background: var(--accent);
+            color: white
+        }
+
+        .btn.primary:hover {
+            background-color: var(--accent_dark);
+        }
+
+        @media (max-width:880px) {
+            .row {
+                flex-direction: column
+            }
+
+            .wrap {
+                padding: 12px
+            }
+        }
+
+
+        .note {
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        .footer-note {
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 14px
+        }
+
+
+        .error {
+            border-color: var(--danger) !important
+        }
+
+        .error-text {
+            color: var(--danger);
+            font-size: 13px;
+            margin-top: 6px
+        }
+
+
+        .section {
+            background: linear-gradient(180deg, rgba(250, 251, 255, 1), rgba(255, 255, 255, 1));
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid var(--border)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <a href="../painel/painel.html"><button class="btn back"> Voltar</button></a>
+    </div>
+    <div class="wrap">
+        <header>
+            <h1>Registro de Queixa</h1>
+            <p>Preencha o formulário abaixo com todas as informações relevantes sobre o incidente. Todas as informações
+                são tratadas com confidencialidade.</p>
+        </header>
+
+        <form id="complaintForm" class="card" novalidate>
+
+            <div class="section">
+
+
+                <div class="card" style="padding:16px">
+                    <div class="section-title" style="font-size:14px;margin-bottom:10px">Dados do Denunciante</div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="nome">Nome Completo</label>
+                            <input id="nome" name="nome" type="text" placeholder="Digite seu nome completo" required />
+                        </div>
+                        <div class="col">
+                            <label for="idnum">Número de Identificação</label>
+                            <input id="idnum" name="idnum" type="text" placeholder="BI ou Passaporte" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="telefone">Telefone</label>
+                            <input id="telefone" name="telefone" type="tel" placeholder="+244 XXX XXX XXX"
+                                pattern="\+?\d{7,15}" />
+                        </div>
+                        <div class="col">
+                            <label for="email">E-mail</label>
+                            <input id="email" name="email" type="email" placeholder="seu.email@exemplo.com" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col full">
+                            <label for="endereco">Endereço</label>
+                            <input id="endereco" name="endereco" type="text"
+                                placeholder="Rua, Bairro, Município, Província" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Detalhes do Incidente</div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="tipo">Tipo de Crime/Infração</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Selecione o tipo</option>
+                            <option>Furto</option>
+                            <option>Roubo</option>
+                            <option>Corrupção</option>
+                            <option>Violência</option>
+                            <option>Tráfico</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="urgencia">Nível de Urgência</label>
+                        <select id="urgencia" name="urgencia" required>
+                          <option value="">Selecione a urgência</option>
+                          <option>Baixa</option>
+                          <option>Média</option>
+                          <option>Alta</option>
+                          <option>Emergência</option>
+                        </select>
+                      </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="data">Data do Incidente</label>
+                        <input id="data" name="data" type="date" />
+                    </div>
+                    <div class="col">
+                        <label for="hora">Hora Aproximada</label>
+                        <input id="hora" name="hora" type="time">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col full">
+                        <label for="local">Localização do Incidente</label>
+                        <input id="local" name="local" type="text"
+                            placeholder="Endereço completo, Município, Província" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col full">
+                        <label for="descricao">Descrição do Sucesso</label>
+                        <textarea id="descricao" name="descricao"
+                            placeholder="Descreva o incidente com o máximo de detalhes possíveis: o que aconteceu, quem esteve envolvido, testemunhas, etc."></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col full">
+                        <label for="suspeitos">Suspeitos (se conhecidos)</label>
+                        <textarea id="suspeitos" name="suspeitos"
+                            placeholder="Informações sobre os suspeitos: nomes, características físicas, endereços conhecidos, etc."></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col full">
+                        <label for="testemunhas">Testemunhas</label>
+                        <textarea id="testemunhas" name="testemunhas"
+                            placeholder="Informações sobre testemunhas: nomes, contactos, etc."></textarea>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <div class="section-title">Evidências e Documentos</div>
+                <div class="muted">Anexe fotos, vídeos, documentos ou quaisquer outras evidências relacionadas ao caso
+                    (PNG, JPG, PDF, MP4 — máx. 10MB por arquivo).</div>
+
+                <label class="upload" for="files">
+                    <div style="font-weight:600;margin-bottom:6px">Clique para carregar ou arraste arquivos</div>
+                    <div class="hint">PNG, JPG, PDF, MP4 (MAX. 10MB por arquivo)</div>
+                    <input id="files" name="files" type="file" multiple accept="image/*,application/pdf,video/mp4" />
+                </label>
+
+                <div id="fileList" class="note" style="margin-top:8px"></div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Informações Adicionais</div>
+                <textarea id="adicionais" name="adicionais"
+                    placeholder="Qualquer outra informação que considere relevante para a investigação"></textarea>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="btn secondary" id="cancelBtn">Cancelar</button>
+                <button type="submit" class="btn primary">Submeter Queixa</button>
+            </div>
+
+            <div class="footer-note">Todas as informações fornecidas são tratadas com máxima confidencialidade.</div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

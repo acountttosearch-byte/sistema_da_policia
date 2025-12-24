@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singup</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('./bandeira.jpg');
+            background-size:cover;
+            background-color: #aca8a863;
+        }
+        .conteiner{
+            width: 70%;
+            height: 85%;
+            background-color: #fafafab7;
+            backdrop-filter: blur(5px);
+            border-radius: 6px;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+        }
+        #text-box{
+            width: 100%;
+            height: 25%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        #subttle{
+            margin-top: 11px;
+        }
+        #images-box{
+            width: 100%;
+            height: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+          
+
+        form{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        
+        input{
+            border: 0.2px solid grey;
+           border-radius: 6px;
+           width: 45%;
+           height: 37px;
+           padding: 4px;
+           margin-bottom: 12px;
+           box-sizing: border-box;
+            }
+         input:focus{
+            border: 1px solid grey;
+            outline: none;
+            border-color: rgb(0, 153, 255);
+        }
+        button{
+            border: none;
+            margin-top: 8px;
+            font-size: 15px;
+            color: #fff;
+            background-color: rgb(14, 76, 192);
+            width: 280px;
+            height: 35px;
+            border-radius: 4px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(14, 62, 192);
+        }
+        .info{
+            color: #050505d0;
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            }
+            
+        a{
+            font-size: 12px;
+        }
+            .links{
+                width: 410px;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .info1{
+            color: #e6e3e3d0;
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: center;
+            }
+            footer{
+                height: 10%;
+                display:flex;
+                justify-content: end;
+                align-items: end;
+            }
+                
+    </style>
+</head>
+<body>
+
+    <div class="conteiner">
+        <div class="content">
+            
+            <div id="images-box">
+            <img src="#" alt="emblemas">
+            </div>
+                
+        <div id="text-box">
+            <h2>Login de Sistema</h2>
+            <h5 id="subttle">Insira seus dados de acesso</h5>
+        </div>
+        <form action="#">
+            <input type="text" placeholder="Número de Identificação Funcional" required>
+            <input type="password" placeholder="Palavra-Passe" required>
+            
+           <div class="links"><a href="#"></a> <a href="#">Ajuda</a></div>
+            
+            <div id="button-box">
+                 <button id="createacount">Acessar o Sistema</button>
+            </div>
+           
+        </form>
+        </div>
+    </div>
+    <footer>
+        <div class="info">
+            <label><h6>Sistema de Acesso Exclusivo para Agentes de Investigação</h6></label>
+            <label><h6>Criminal Autorizados.</h6></label>
+        </div>
+    </footer>
+</body>
+</html>
