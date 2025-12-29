@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>painel</title>
+    <title>painel inicial</title>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <style>
         * {
     margin: 0;
@@ -137,18 +138,10 @@ body {
 .sidebar li.active {
     background-color: #e1dfdd;
     color: #323130;
-    border-left-color: #8E24AA;
+    border-left-color: #0078d4;
 }
 
-.sidebar li::before {
-    content: '';
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    background: #8E24AA;
-    border-radius: 2px;
-    opacity: 0.3;
-}
+
 
 .main-content {
     margin-left: 220px;
@@ -185,7 +178,7 @@ body {
 .tab.active {
     color: #323130;
     font-weight: 500;
-    border-bottom-color: #772ce8;
+    border-bottom-color: #02599b;
 }
 
 .tab:last-child {
@@ -250,13 +243,16 @@ body {
 }
 
 .details-panel {
-    width: 320px;
+    
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 400px;
     background: white;
     border: 1px solid #edebe9;
     border-radius: 4px;
     padding: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.192);
 }
 
 .details-title {
@@ -334,6 +330,10 @@ body {
     margin-left: 4px;
 }
 
+.c-status-btn {
+font-size: 19px; 
+}
+
 .footer {
     height: 32px;
     background-color: #fff;
@@ -351,15 +351,14 @@ body {
 <body>
 
     <header class="header">
-        <div class="logo">Sistema de Investigations</div>
+        <div class="logo">Sistema de Gestão da Policia</div>
         <div class="search-bar">
             <input type="text" placeholder="Pesquisa pelo Nº Processo, BI ou passaporte">
             <button id="btnsearch">Pesquisar</button>
         </div>
         <div class="header-actions">
-            <button title="Notificações">🔔</button>
-            <button title="Configurações">⚙️</button>
-            <button title="Perfil">👤</button>
+            <button class="c-status-btn" title="Notificações"> <i class='bx  bxs-menu-notification' style='color:#020202'></i> </button>
+            <button class="c-status-btn" title="Perfil"><i class='bx  bxs-user' style='color:#242424'></i> </button>
         </div>
     </header>
 
@@ -368,12 +367,12 @@ body {
             <ul>
                 <li data-section="search">Menu</li>
                 <li data-section="queries" class="active">Painel principal</li>
-                <li data-section="config">Meus processos</li>
+                <li data-section="config">Meus Casos</li>
                 <li data-section="workbooks">Relatorios</li>
-                <li data-section="media"><a href="../registro/registro.html">Rigistar Processo</a></li>
-                <li data-section="threat">Pesquisa avançada</li>
+                <li data-section="media">Rigistar Ocorrência</li>
+                <li data-section="threat">Detalhes da Unidade</li>
                 <li data-section="defender">Processos</li>
-                <li data-section="worktools">Relatorios</li>
+                <li data-section="worktools">Configurações Central</li>
             </ul>
         </nav>
 
@@ -524,282 +523,11 @@ body {
                         <div class="col col-owner">Em andamento</div>
                         <div class="col col-templates">20/11/2025</div>
                     </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-                    <div class="table-row selected" data-item="analytics">
-                        <div class="col col-name">P_Nº1234567890</div>
-                        <div class="col col-file">Roubo de viaura</div>
-                        <div class="col col-owner">Em andamento</div>
-                        <div class="col col-templates">20/11/2025</div>
-                    </div>
-
                 </div>
             </div>
 
 
-            <aside class="details-panel" id="details-panel">
+            <!--aside class="details-panel" id="details-panel">
                 <div class="details-title" id="details-title">Nº do processo e título</div>
                 <div class="detail-group">
                     <div class="detail-label">Descrição</div>
@@ -832,32 +560,52 @@ body {
                             <div class="detail-text">Microsoft Content</div>
                         </div>
                     </div>
-                    <div class="sub-detail">
-                        <div class="detail-label">Detalhes pessoais</div>
-                        <div class="detail-text">Nome</div>
-                        <div class="detail-label">BI</div>
-                        <div class="detail-text">Endereço</div>
-                        <div class="detail-text">Estado</div>
-                        <div class="detail-text">Data de entrada</div>
-                    </div>
-                    <div class="sub-detail">
-                        <div class="detail-label">Detalhes pessoais</div>
-                        <div class="detail-text">Nome</div>
-                        <div class="detail-label">BI</div>
-                        <div class="detail-text">Endereço</div>
-                        <div class="detail-text">Estado</div>
-                        <div class="detail-text">Data de entrada</div>
-                    </div>
                 </div>
 
-            </aside>
+            </aside-->
+
+            <aside class="details-panel">
+    <div class="details-title">Nº do Processo</div>
+ <div class="detail-text">
+            <strong>P_Nº1234567890</strong><br></div>
+    <div class="detail-group">
+        
+       <div class="detai-text">
+            Roubo de viatura - Benfica
+        </div>
+    </div>
+
+
+    <div class="detail-group">
+        <div class="domain-pub">
+            <div class="sub-detail">
+                <div class="detail-label">Data Registro</div>
+                <div class="detail-text">20/11/2025</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="detail-group">
+        <div class="detail-label">Resumo dos Factos</div>
+        <div class="detail-text" style="background: #fafafa; padding: 10px; border-radius: 4px; border: 1px solid #edebe9;">
+            Ocorrência registada às 14h. Viatura Toyota Hilux subtraída sob coação. Diligências em curso para localização do suspeito.
+        </div>
+    </div>
+
+    <div class="detail-group" style="margin-top: 30px; border-top: 1px solid #edebe9; padding-top: 15px;">
+        <div class="detail-label">Responsável</div>
+        <div class="detail-text">Inspetor Manuel Domingos</div>
+
+        <div class="detail-text"><a href="">ver processo</a></div>
+        
+    </div>
+</aside>
         </main>
 
     </div>
 
-    <footer class="footer">
-        <span>&copy; Microsoft Corporation</span>
-    </footer>
+
 </body>
 
 </html>

@@ -4,9 +4,99 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Registro de Queixa</title>
+    <title>Registro de Queixa</title>  <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <style>
-                :root {
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f2f1;
+    color: #323130;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #edebe9;
+    padding: 0 24px;
+    height: 48px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0078d4;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    max-width: 550px;
+    margin: 0 24px;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 8px 12px;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.search-bar input:focus {
+    border: 1px solid #0078d4;
+
+}
+
+.search-bar button {
+    width: 17%;
+    padding: 8px 12px;
+    background-color: #0078d4;
+    color: #fff;
+    border: 1px solid #edebe9;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #02599b;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-actions button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.header-actions button:hover {
+    background-color: #f3f2f1;
+}
+
+.c-status-btn {
+font-size: 19px; 
+}
+           :root {
             --bg: #f5f7fa;
             --card: #ffffff;
             --muted: #6b7280;
@@ -242,9 +332,16 @@
 </head>
 
 <body>
-    <div class="section">
-        <a href="../painel/painel.html"><button class="btn back"> Voltar</button></a>
-    </div>
+   
+    <header class="header">
+        <a href="#" class="back"><i class='bx  bx-arrow-left-stroke' style='color:#ffffff'></i> Voltar</a>
+    
+        <div class="header-actions">
+            <button class="c-status-btn" title="Notificações"> <i class='bx  bxs-menu-notification' style='color:#020202'></i> </button>
+            <button class="c-status-btn" title="Perfil"><i class='bx  bxs-user' style='color:#242424'></i> </button>
+        </div>
+
+    </header>
     <div class="wrap">
         <header>
             <h1>Registro de Queixa</h1>
